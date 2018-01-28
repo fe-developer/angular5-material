@@ -1,0 +1,40 @@
+<div class="content">
+  <mat-card>
+    <mat-form-field>
+      <input matInput [matAutocomplete]="auto" placeholder="Search your movie..." [formControl]="myControl" class="search-input" value="{{ startValue }}">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let movie of movies | async"
+                    [value]="movie.Title">
+          <span>{{ movie.Title }}</span>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </mat-card>
+
+  <div class="movies">
+    <div class="movie-container"
+         *ngFor="let movie of movies | async">
+
+      <div class="movie"
+           (click)="goToMovie(movie.imdbID)">
+        <div class="poster-container">
+          <img src="{{ movie.Poster !== 'N/A' ? movie.Poster : 'http://via.placeholder.com/70x90' }}"
+               alt="{{ movie.Title }}"
+               class="poster">
+          <span class="type">{{ movie.Type }}</span>
+        </div>
+
+        <span class="info">
+          <span class="title">{{ movie.Title }}</span>
+          <span class="year">{{ movie.Year }}</span>
+        </span>
+      </div>
+
+      <div (click)="addToFavourite(movie)" [ngClass]="{ 'active': isFavourite(movie), 'favourites': true }">
+        <mat-icon class="add-to-favourite">star</mat-icon>
+      </div>
+
+    </div>
+  </div>
+
+</div>

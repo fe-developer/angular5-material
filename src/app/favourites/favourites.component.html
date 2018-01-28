@@ -1,0 +1,26 @@
+<div class="content">
+  <div class="favourites">
+    <div class="title">
+      <h1>Favourites</h1>
+      <a routerLink="" class="addmore">+ Add more movies</a>
+    </div>
+
+    <div class="favourite-container" *ngFor="let favourite of favourites">
+      <div class="favourite" (click)="goToMovie(favourite.imdbID)">
+        <div class="poster-container">
+          <img src="{{ favourite.Poster !== 'N/A' ? favourite.Poster : 'http://via.placeholder.com/70x90' }}" alt="" class="poster">
+          <span class="type">{{ favourite.Type }}</span>
+        </div>
+        <div class="info">
+          <span class="ftitle">{{ favourite.Title }}</span>
+          <span>{{ favourite.Year }}</span>
+        </div>
+      </div>
+
+      <div class="remove" (click)="removeFromFavourites(favourite)">
+        <mat-icon>delete</mat-icon>
+      </div>
+    </div>
+
+  </div>
+</div>

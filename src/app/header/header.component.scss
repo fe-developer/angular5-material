@@ -1,0 +1,17 @@
+.mat-toolbar {
+  width: 100vw;
+}
+
+.tops {
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.separator {
+  flex-grow: 1;
+}

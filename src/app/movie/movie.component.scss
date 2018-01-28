@@ -1,0 +1,94 @@
+@import "../../vars";
+
+.spinner {
+  background-color: rgba(255, 255, 255, .7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie {
+
+}
+
+.title {
+  padding: 15px 0;
+  color: $primary-color;
+}
+
+.preview {
+  @media screen and (max-width: 530px) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media screen and (max-width: 430px) {
+    flex-direction: column;
+  }
+}
+
+.info {
+  display: flex;
+
+  @media screen and (max-width: 530px) {
+    flex-direction: column;
+  }
+}
+
+.poster-container {
+  @media screen and (max-width: 430px) {
+    text-align: center;
+  }
+}
+
+.poster {
+  max-width: 300px;
+
+  @media screen and (max-width: 700px) {
+    max-width: 200px;
+  }
+}
+
+.details {
+  margin-left: 20px;
+
+  @media screen and (max-width: 530px) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+.detail {
+  margin-bottom: 10px;
+  display: flex;
+  span {
+    display: block;
+    width: 100px;
+    min-width: 100px;
+    color: $primary-color;
+  }
+}
+
+.rating {
+  @media screen and (max-width: 530px) {
+    margin-left: 15px;
+  }
+
+  @media screen and (max-width: 430px) {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  li:first-child {
+    color: $primary-color;
+  }
+
+  span:first-child {
+    font-weight: 700;
+  }
+}

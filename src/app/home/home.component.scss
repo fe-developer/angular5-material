@@ -1,0 +1,93 @@
+.mat-card:not([class*=mat-elevation-z]) {
+  padding-bottom: 0;
+  box-shadow: none;
+}
+
+.mat-card {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 20px;
+}
+
+.mat-input-container, .mat-form-field-infix {
+  width: 100%;
+}
+
+.movie-container {
+  display: flex;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  transition: all ease 0.3s;
+
+  margin-bottom: 20px;
+
+  &:hover {
+    transform: scale(1.02, 1.02);
+  }
+}
+
+.movie {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  height: auto;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  margin: 0 15px;
+  height: 100%;
+}
+
+.poster-container {
+  position: relative;
+}
+
+.poster {
+  width: 70px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.type {
+  font-size: 10px;
+  display: block;
+  background-color: red;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2px 5px;
+  line-height: 1;
+  text-align: center;
+}
+
+.year {
+
+}
+
+.favourites {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.3s;
+  color: #d1d1d1;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d1d1d1;
+    color: #fff;
+  }
+
+  &.active {
+    color: #3f51b5;
+  }
+}

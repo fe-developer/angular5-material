@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+@import "vars";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.content {
+  min-height: calc( 100vh - 64px - 40px );
+  margin: 0 16px;
+  padding-bottom: 20px;
+
+  @media screen and (max-width: 600px) {
+    min-height: calc( 100vh - 56px - 40px );
+  }
+}
+
+ul {
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}

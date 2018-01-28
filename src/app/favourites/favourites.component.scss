@@ -1,0 +1,83 @@
+@import "../../vars";
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  padding: 15px 0;
+  color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addmore {
+  font-size: 16px;
+  font-weight: 400;
+  color: $primary-color;
+  text-decoration: underline;
+}
+
+.favourite-container {
+  display: flex;
+  margin-bottom: 20px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02, 1.02);
+  }
+}
+
+.favourite {
+  flex-grow: 1;
+  display: flex;
+  padding: 15px;
+  background-color: $secondary-color;
+}
+
+.ftitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.poster-container {
+  position: relative;
+}
+
+.poster {
+  max-width: 70px;
+}
+
+.type {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+}
+
+.info {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.remove {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+
+  color: $primary-color;
+  background-color: $secondary-color;
+  transition: all ease 0.3s;
+
+  &:hover {
+    color: #fff;
+    background-color: $primary-color;
+  }
+}

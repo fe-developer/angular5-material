@@ -1,0 +1,38 @@
+<div class="content">
+  <div class="movie" *ngIf="movie">
+    <div class="title">{{ movie.Title }}</div>
+    <div class="info">
+      <div class="preview">
+        <div class="poster-container">
+          <img src="{{ movie.Poster !== 'N/A' ? movie.Poster : 'http://via.placeholder.com/300x400' }}" alt="" class="poster">
+        </div>
+        <ul class="rating" *ngIf="movie.Ratings.length">
+          <li>Ratings: </li>
+          <li *ngFor="let rating of movie.Ratings">
+            <span>{{ rating.Source }}</span>
+            <span>{{ rating.Value }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="details">
+        <div class="detail"><span>Year:</span> {{ movie.Year }}</div>
+        <div class="detail"><span>Country:</span> {{ movie.Country }}</div>
+        <div class="detail"><span>Language:</span> {{ movie.Language }}</div>
+        <div class="detail"><span>Released:</span> {{ movie.Released }}</div>
+        <div class="detail"><span>Runtime:</span> {{ movie.Runtime }}</div>
+        <div class="detail"><span>Genre:</span> {{ movie.Genre }}</div>
+        <div class="detail"><span>Director:</span> {{ movie.Director }}</div>
+        <div class="detail"><span>Writer:</span> {{ movie.Writer }}</div>
+        <div class="detail"><span>Actors:</span> {{ movie.Actors }}</div>
+        <div class="detail"><span>Plot:</span> {{ movie.Plot }}</div>
+        <div class="detail"><span>Awards:</span> {{ movie.Awards }}</div>
+        <div class="detail"><span>Production:</span> {{ movie.Production }}</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="spinner" *ngIf="loading">
+    <mat-spinner [diameter]="30"></mat-spinner>
+  </div>
+</div>
